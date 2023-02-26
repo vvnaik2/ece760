@@ -10,7 +10,7 @@ def kNN(x, X, k, Y):
     knn_y = Y[np.argsort(X, axis=-1)[0:k]]
     return knn_y
 
-d2z = pd.read_csv("D2z.txt", header=None, delimiter = ' ').to_numpy()
+d2z = pd.read_csv("data/D2z.txt", header=None, delimiter = ' ').to_numpy()
 
 X = d2z[:, :-1]
 Y = d2z[:, -1:]
@@ -39,7 +39,7 @@ plt.savefig("P1_Plot.png")
 plt.show()
 
 # Spam Dataset
-spam_df = pd.read_csv('emails.csv')
+spam_df = pd.read_csv('data/emails.csv')
 sdf_in = spam_df.drop(labels = ['Prediction', 'Email No.'], axis = 1).to_numpy()
 sdf_out = pd.DataFrame(spam_df['Prediction']).to_numpy()
 # Epsilon
