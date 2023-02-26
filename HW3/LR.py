@@ -4,7 +4,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import math
 
-sf_data  = pd.read_csv('emails.csv')
+sf_data  = pd.read_csv('data/emails.csv')
 sf_df = pd.DataFrame(sf_data)
 sf_feature_data = sf_df.drop(["Prediction","Email No."], axis='columns').to_numpy()
 sf_label_data = sf_df[['Prediction']].to_numpy()
