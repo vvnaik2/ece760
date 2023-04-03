@@ -29,7 +29,7 @@ def pca(X, d):
     
     # Compute reconstructions of d-dimensional representations in D dimensions
     X_reconstructed = X_pca.dot(Vt[:d])
-    X_reconstructed += X_mean
+    #X_reconstructed += X_mean
     
     return X_pca, params, X_reconstructed, s 
 
